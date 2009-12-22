@@ -1,0 +1,23 @@
+These scripts will change your status in Pidgin on Linux by providing them the
+feed to your blog or the feed to your Twitter statuses.
+
+To be able to change your Pidgin's status, both of them need to have access to
+some environment variables which are set by the accompanying export_x_info.sh
+which should be set to run after each boot.
+
+Provided that you use GNOME as your Desktop Environment, to add the previous
+script to the list of applications that are run after each boot, go to
+System - Preferences - Startup Applications.
+
+The two Python script used for changing Pidgin's status must then be called from
+a cron job. E.g.:
+
+# m h  dom mon dow   command
+SHELL=/bin/bash
+DISPLAY=:0.0
+*/5 * * * * source ~/.Xdbus; ~/bin/python_script.py feed_url
+
+For more details visit the following links:
+1. http://radu.cotescu.com/2009/08/26/python-and-pidgin-status-on-ubuntu-linux/
+2. http://radu.cotescu.com/2009/12/22/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/
+
