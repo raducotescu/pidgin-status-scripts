@@ -42,7 +42,6 @@ def changeStatus():
 					tweet = tweet.replace('"', '');
 					print """\tStatus:\n\t%s""" % tweet
 					status = 'purple-remote "setstatus?status=available&message=%s"' % tweet
-					print status
 					os.system(status)
 					break
 
