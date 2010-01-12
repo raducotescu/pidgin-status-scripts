@@ -33,7 +33,7 @@ def changeStatus():
 			print time.strftime('%d-%m-%Y, %H:%M:%S', time.localtime())
 			for i in range(0, len(feed['items'])):
 				content = feed['items'][i].title.encode('utf-8')
-				link = feed['items'][i].link.encode('utf-8')
+				# link = feed['items'][i].link.encode('utf-8')
 				startPos = content.find(":") + 2 
 				utilMsg = content[startPos : len(content)]
 				if not utilMsg.startswith('@'):
