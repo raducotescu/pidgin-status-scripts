@@ -38,8 +38,8 @@ def changeStatus():
 				utilMsg = content[startPos : len(content)]
 				if not utilMsg.startswith('@'):
 					tweet = ''.join(utilMsg.split('#'))
-					tweet = tweet.replace('&gt;', '')
-					tweet = tweet.replace('&lt;', '')
+					tweet = tweet.replace('&gt;', '>')
+					tweet = tweet.replace('&lt;', '<')
 					tweet = tweet.replace('&', 'and')
 					tweet = tweet.replace('"', '');
 					print """\tStatus:\n\t%s""" % tweet
