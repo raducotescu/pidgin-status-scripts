@@ -9,7 +9,7 @@ Provided that you use GNOME as your Desktop Environment, to add the previous
 script to the list of applications that are run after each boot, go to
 System - Preferences - Startup Applications.
 
-The two Python script used for changing Pidgin's status must then be called from
+The two Python scripts used for changing Pidgin's status must then be called from
 a cron job. E.g.:
 
 # m h  dom mon dow   command
@@ -18,6 +18,6 @@ DISPLAY=:0.0
 */5 * * * * source ~/.Xdbus; ~/bin/python_script.py feed_url
 
 For more details visit the following links:
-1. http://radu.cotescu.com/2009/08/26/python-and-pidgin-status-on-ubuntu-linux/
-2. http://radu.cotescu.com/2009/12/22/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/
+1. http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/
+2. http://radu.cotescu.com/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/
 
